@@ -2,23 +2,26 @@
      
     <div class="main" style=" min-height: 100vh;">
 
-        <div class="hero" style=" height: 96vh;">
+        <div class="hero" style=" height: 98vh;">
+
             <Header />
              
             <!-- start of hero section -->
-            <v-container style="color: white;">
+            <v-container style="color: white; padding-top: 5.8rem;">
              
                  
                      <div class="hero-content">
                          <div class="hero-title mt-md-4">
                              <h3 class="my-text" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
-                              <p class="my-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum is
-                                  simply dummy text of the printing and typesetting.
+                              <p  class="my-10 hero-p" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
+                                 typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
                              </p>
  
-                             <v-btn  class="text-capitalize" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
+
+                            <v-btn  class="text-capitalize" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
                                  let's Talk
-                             </v-btn>
+                            </v-btn>
+
                          </div>
 
                         <div class="hero-img">
@@ -71,15 +74,15 @@
     </div>
     
     
-    <div class=" mt-14 border py-4">
+    <div class=" mt-5 mt-md-14 border py-4">
           <div class="slides">
-              <span>SEO</span>
-              <div style="height: 5px; width: 10px; background: #025945;"></div>
-              <span>GRAPHIC DESIGN</span>
-              <div style="height: 5px; width: 10px; background: #025945;"></div>
-              <span>UI DESIGN</span>
-              <div style="height: 5px; width: 10px; background: #025945;"></div>
-              <span>DIGITAL MARKETING</span>
+              <span class="span">SEO</span>
+              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+              <span class="span">GRAPHIC DESIGN</span>
+              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+              <span class="span">UI DESIGN</span>
+              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+              <span class="span">DIGITAL MARKETING</span>
           </div>
     </div>
 
@@ -117,6 +120,7 @@
 
 <script>
 
+import { gsap } from "gsap";
 export default {
     data(){
         return{
@@ -137,6 +141,23 @@ export default {
           ? [6, 12, 12, 12, 12, 12, 12, 12, 12]
           : [6, 12, 12, 12, 12, 12, 12, 12, 12];
       },
+    },
+
+    mounted(){
+        var tl = gsap.timeline();
+        tl.fromTo('.slides .span', 
+        { 
+            x:400,
+           
+        }, 
+
+        { 
+            duration: 10, 
+            x: -400,
+            ease: 'linear',
+            repeat: -1,
+            delay: (el, i) => i * 0.5,
+        });
     }
 }
 </script>
@@ -161,6 +182,9 @@ export default {
 .hero-title{
     position: relative;
     z-index: 10;
+}
+.hero-p{
+    width: 50%;
 }
 
 .hero-img{
@@ -191,7 +215,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 0px 4px;
     font-size: 40px;
     color:#025945;
@@ -199,6 +222,10 @@ export default {
 }
 
 @media (max-width: 768px) { /* xs breakpoint */
+    .hero{
+        height: 90vh !important;
+   }
+
     .main{
       min-height: 910px !important;
    }
@@ -206,10 +233,14 @@ export default {
     font-size: 45px;
     line-height: 1.2 !important;
   }
+  .hero-p{
+    width: 100%;
+}
 
   .hero-img{
     position: relative;
-    width: 420px;
+    /* min-width: 420px; */
+    width: 427px;
     top: 20px;
     left: -5em;
 }
@@ -231,6 +262,7 @@ export default {
     font-size: larger;
     max-width: none;
     margin: 0;
+
 
  }
 
