@@ -3,8 +3,8 @@
     <v-container class="mb-6">
         <v-row no-gutters>
             <v-col cols="md-4" sm="12">
-                <div style="font-family: Permanent Marker !important; font-size:60px;" 
-                    class=" d-flex   font-weight-bold" >
+                <div  style="font-family: Permanent Marker !important; font-size:60px;" 
+                    class="logo d-flex   font-weight-bold" >
                     InHouse
                 </div>
             </v-col>
@@ -112,6 +112,12 @@
     }
 
 @media (max-width: 960px) { /* md breakpoint */
+    .logo{
+        font-size: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
     .footer-link h4{
        font-size: 16px !important;
     }
@@ -122,6 +128,7 @@
     }
     .footer-title{
         font-size: 35px ! important;
+       
     }
 }
 </style>

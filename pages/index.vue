@@ -14,13 +14,13 @@
                      
                          <div class="hero-content">
                              <div class="hero-title mt-md-4">
-                                 <h3 class="my-text" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
-                                  <p  class="my-10 hero-p" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
+                                 <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
+                                  <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
                                      typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
                                  </p>
      
     
-                                <v-btn  class="text-capitalize" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
+                                <v-btn  class="text-capitalize stagger" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
                                      let's Talk
                                 </v-btn>
     
@@ -165,6 +165,34 @@ export default {
     },
 
     mounted(){
+        // hero section animations
+        const textElements = document.querySelectorAll('.hero-title .stagger');
+        gsap.fromTo(textElements, {
+            duration: 3,
+            opacity: 0,
+            x: -200, // Adjust initial offset as needed
+            // stagger: 0.1, // Stagger each animation by 0.2 seconds
+            ease: 'linear', // Use a natural easing function
+        }, {
+            opacity: 1,
+            x: 0,
+        });
+
+        const heroImage = document.querySelector('.img1');
+        gsap.fromTo(heroImage, {
+            duration: 1.5,
+            opacity: 0,
+            y: 50, // Adjust initial offset as needed
+            blur: 10, // Start with motion blur
+            }, {
+            opacity: 1,
+            y: 0,
+            blur: 0, // Remove blur at the end
+        });
+        // end of hero  animation section
+
+
+
         gsap.utils.toArray('.slides').forEach((line, i) => {
   
             const speed = 50 // (in pixels per second)
