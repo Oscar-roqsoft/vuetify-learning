@@ -121,7 +121,7 @@
 
     }
     .footer-title{
-        font-size: 40px ! important;
+        font-size: 35px ! important;
     }
 }
 </style>
