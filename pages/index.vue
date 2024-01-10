@@ -345,7 +345,7 @@ export default {
   .hero-img{
     position: relative;
     /* min-width: 420px; */
-    width: 427px;
+    max-width: 427px;
     top: 20px;
     left: -5em;
 }

@@ -14,7 +14,7 @@
                            {{ item.id }}
                         </div>
     
-                        <v-img loading
+                        <v-img loading eager
                         class="align-end text-white rounded-lg"
                         max-height="330px"
                         max-width="510px"

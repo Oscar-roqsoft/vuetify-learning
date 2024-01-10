@@ -21,7 +21,7 @@
 
             <v-col class="ga-5" cols="md-6" sm="12">
                 <div>
-                    <v-img max-width="183px" class="img-vector" src="/testimonial-img/Vector1.png"/>
+                    <v-img eager max-width="183px" class="img-vector" src="/testimonial-img/Vector1.png"/>
                 </div>
                 
                 <div>

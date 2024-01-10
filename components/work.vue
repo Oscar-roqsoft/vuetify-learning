@@ -12,7 +12,7 @@
                 <v-row class="border-b py-6  work">
 
                     <v-col cols="md-6" sm="12" lg="6" :class=" item.id === 2? 'order-md-2':''">
-                        <v-img :src="item.img"/>
+                        <v-img eager :src="item.img"/>
                     </v-col>
 
                     <v-col class="mt-4" cols="md-6" sm="12" lg="6">

@@ -23,7 +23,7 @@
 
             <v-col cols="md-6" sm="12" lg="6">
                 <div class="d-flex justify-md-end">
-                    <v-img
+                    <v-img eager
                        max-width="470px"
                        src="/services-img/img1.png"
                     />
