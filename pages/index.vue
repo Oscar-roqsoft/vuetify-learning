@@ -76,7 +76,7 @@
         </div>
         
         
-        <div class=" mt-5 mt-md-14 border py-4">
+        <div class="  mt-md-14 border py-4">
               <div class="slides">
                   <span class="span">SEO</span>
                   <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
