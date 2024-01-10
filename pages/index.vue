@@ -27,7 +27,7 @@
                              </div>
     
                             <div class="hero-img">
-                                <v-img width="auto"  height="100%"  cover class="" src="/hero-images/img.png" />
+                                <v-img   class="img1" src="/hero-images/img.png" />
                                 <div class="inner-hero-img">
                                     <v-img  class="img" src="/hero-images/arc-button.png"/>
                                 </div>
@@ -350,8 +350,7 @@ export default {
     min-height: 500px;
     min-width: 0;
 }
-.hero-img .img{
-    position: absolute;
+.hero-img .img1{
     /* max-width: 472px; */
     width: 100%;
     height: 100%;
@@ -359,11 +358,12 @@ export default {
     left: -38px;
 }
 .inner-hero-img{
-    top: -60px;
-    left: 60px ;
+    top: -40px;
+    left: 30px ;
     width: 65px;
     height: 65px;
 }
+
  .social-icons{
     display:none;
  }
