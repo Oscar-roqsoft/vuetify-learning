@@ -1,118 +1,120 @@
 <template>
-     
-    <div id="home" class="main" style=" min-height: 100vh;">
 
-        <div class="hero" style=" height: 98vh;">
-
-            <Header />
-             
-            <!-- start of hero section -->
-            <v-container  style="color: white; padding-top: 5.8rem;">
-             
+    <div transition="slide-x-transition">
+        
+        <div id="home" class="main" style=" min-height: 100vh;">
+    
+            <div class="hero" style=" height: 98vh;">
+    
+                
                  
-                     <div class="hero-content">
-                         <div class="hero-title mt-md-4">
-                             <h3 class="my-text" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
-                              <p  class="my-10 hero-p" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
-                                 typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
-                             </p>
- 
-
-                            <v-btn  class="text-capitalize" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
-                                 let's Talk
-                            </v-btn>
-
-                         </div>
-
-                        <div class="hero-img">
-                            <v-img class="" src="/hero-images/img.png" />
-                            <div class="inner-hero-img">
-                                <v-img class="img" src="/hero-images/arc-button.png"/>
-                            </div>
-                        </div>
-                     </div>
+                <!-- start of hero section -->
+                <v-container  style="color: white; padding-top: 5.8rem;">
+                 
                      
+                         <div class="hero-content">
+                             <div class="hero-title mt-md-4">
+                                 <h3 class="my-text" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
+                                  <p  class="my-10 hero-p" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
+                                     typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
+                                 </p>
+     
+    
+                                <v-btn  class="text-capitalize" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
+                                     let's Talk
+                                </v-btn>
+    
+                             </div>
+    
+                            <div class="hero-img">
+                                <v-img class="" src="/hero-images/img.png" />
+                                <div class="inner-hero-img">
+                                    <v-img class="img" src="/hero-images/arc-button.png"/>
+                                </div>
+                            </div>
+                         </div>
+                         
+                
             
+                </v-container>
+                 <!-- end of hero section -->
+     
+            </div>
+            
+            <div class="social-icons">
+                <v-container>
+                    <v-row class="py-10">
+                        <span class="text-decoration-underline">LinkedIn</span>
         
-            </v-container>
-             <!-- end of hero section -->
- 
+                        <div class="hero-vector mx-6">
+                            <v-img src="/hero-images/Vector.png"/>
+                        </div>
+                        <span class="text-decoration-underline">Facebook</span>
+        
+                        <div class="hero-vector mx-6">
+                            <v-img src="/hero-images/Vector.png"/>
+                        </div>
+                        <span class="text-decoration-underline">Instagram</span>
+        
+                        <div class="hero-vector mx-6">
+                            <v-img src="/hero-images/Vector.png"/>
+                        </div>
+                        <span class="text-decoration-underline">Dribble</span>
+        
+                        <div class="hero-vector mx-6">
+                            <v-img src="/hero-images/Vector.png"/>
+                        </div>
+    
+                        <span class="text-decoration-underline">twitter</span>
+        
+                    </v-row>
+    
+                </v-container>
+            </div>
+    
+            
         </div>
         
-        <div class="social-icons">
-            <v-container>
-                <v-row class="py-10">
-                    <span class="text-decoration-underline">LinkedIn</span>
-    
-                    <div class="hero-vector mx-6">
-                        <v-img src="/hero-images/Vector.png"/>
-                    </div>
-                    <span class="text-decoration-underline">Facebook</span>
-    
-                    <div class="hero-vector mx-6">
-                        <v-img src="/hero-images/Vector.png"/>
-                    </div>
-                    <span class="text-decoration-underline">Instagram</span>
-    
-                    <div class="hero-vector mx-6">
-                        <v-img src="/hero-images/Vector.png"/>
-                    </div>
-                    <span class="text-decoration-underline">Dribble</span>
-    
-                    <div class="hero-vector mx-6">
-                        <v-img src="/hero-images/Vector.png"/>
-                    </div>
-
-                    <span class="text-decoration-underline">twitter</span>
-    
-                </v-row>
-
-            </v-container>
-        </div>
-
         
+        <div class=" mt-5 mt-md-14 border py-4">
+              <div class="slides">
+                  <span class="span">SEO</span>
+                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                  <span class="span">GRAPHIC DESIGN</span>
+                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                  <span class="span">UI DESIGN</span>
+                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                  <span class="span">DIGITAL MARKETING</span>
+                  <!-- <div class="span" style="height: 5px; width: 10px; background: #025945;"></div> -->
+              </div>
+        </div>
+    
+            
+            
+            
+            <div id="aboutus" >
+                <about-us/>
+            </div>
+    
+            <div id="services">
+                <services />
+            </div>
+    
+            <div>
+                <work />
+            </div>
+    
+            <div>
+                <testimonials />
+            </div>
+    
+            <div>
+                <contact />
+            </div>
     </div>
-    
-    
-    <div class=" mt-5 mt-md-14 border py-4">
-          <div class="slides">
-              <span class="span">SEO</span>
-              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-              <span class="span">GRAPHIC DESIGN</span>
-              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-              <span class="span">UI DESIGN</span>
-              <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-              <span class="span">DIGITAL MARKETING</span>
-              <!-- <div class="span" style="height: 5px; width: 10px; background: #025945;"></div> -->
-          </div>
-    </div>
+     
 
         
-        
-        
-        <div id="aboutus" >
-            <about-us/>
-        </div>
-
-        <div id="services">
-            <services />
-        </div>
-
-        <div>
-            <work />
-        </div>
-
-        <div>
-            <testimonials />
-        </div>
-
-        <div>
-            <contact />
-        </div>
-
-        <div>
-            <footerMenu />
-        </div>
 
        
         <!-- back-to-the-top button -->
@@ -136,6 +138,11 @@
 
 import { gsap } from "gsap";
 export default {
+//     pageTransition: {
+//     name: 'fade', // Choose a transition name
+//     mode: 'out-in',   // Specify transition mode
+//   },
+   
     data(){
         return{
 

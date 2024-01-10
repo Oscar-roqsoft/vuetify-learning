@@ -19,26 +19,26 @@
                    <v-btn-toggle
                        rounded="0"
                        text
-                       color="deep-purple-accent-3"
+                       color="deep-green-accent-3"
                        group theme="dark" variant="text"
                       >
                    
                        <!-- <v-btn value="shop"  to="/shop" class="rounded-xl  text-capitalize font-weight-bold">
                        <span style="font-family: Permanent Marker !important;font-size: 20px;"> Home</span>
                        </v-btn> -->
-                       <v-btn value="home"  to="/#home" class="rounded  text-capitalize font-weight-bold"  
+                       <v-btn value="home"  to="/" class="rounded  text-capitalize font-weight-bold"  
                        style="font-size:14px !important;">
                          Home
                        </v-btn>
-                       <v-btn  to="/#aboutus" class=" rounded text-capitalize font-weight-bold" value="left">
+                       <v-btn  to="/about" class=" rounded text-capitalize font-weight-bold" value="left">
                        About us
                        </v-btn>
    
-                       <v-btn to="/#project" class="rounded text-capitalize font-weight-bold" value="center">
+                       <v-btn to="/project" class="rounded text-capitalize font-weight-bold" value="center">
                        Project
                        </v-btn>
    
-                       <v-btn  to="/#services" class="rounded text-capitalize font-weight-bold" value="right">
+                       <v-btn  to="/services" class="rounded text-capitalize font-weight-bold" value="right">
                        Services
                        </v-btn>
    

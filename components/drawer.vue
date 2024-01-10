@@ -93,11 +93,11 @@
       return {
         drawer: null,
         navigationItems: [
-        { title: 'Home', link: '/#home', icon: 'mdi-home' },
-        { title: 'About Us', link: '/aboutus', icon: 'mdi-information' },
+        { title: 'Home', link: '/', icon: 'mdi-home' },
+        { title: 'About Us', link: '/about', icon: 'mdi-information' },
         { title: 'Projects', link: '/project', icon: 'mdi-briefcase' },
         { title: 'Services', link: '/services', icon: 'mdi-cogs' },
-        { title: 'Contact Us', link: '/contactus', icon: 'mdi-phone' },
+        { title: 'Contact Us', link: '/contact', icon: 'mdi-phone' },
       ],
 
       }

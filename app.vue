@@ -1,9 +1,9 @@
 <template>
+  <v-app>
   <NuxtLayout>
-    <v-app>
       <NuxtPage />
-    </v-app>
-  </NuxtLayout>
+    </NuxtLayout>
+  </v-app>
 </template>
 
 <style>
