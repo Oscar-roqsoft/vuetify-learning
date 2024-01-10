@@ -26,23 +26,23 @@
                        <!-- <v-btn value="shop"  to="/shop" class="rounded-xl  text-capitalize font-weight-bold">
                        <span style="font-family: Permanent Marker !important;font-size: 20px;"> Home</span>
                        </v-btn> -->
-                       <v-btn value="home"  to="/home" class="rounded  text-capitalize font-weight-bold"  
+                       <v-btn value="home"  to="/#home" class="rounded  text-capitalize font-weight-bold"  
                        style="font-size:14px !important;">
                          Home
                        </v-btn>
-                       <v-btn  to="/events" class=" rounded text-capitalize font-weight-bold" value="left">
+                       <v-btn  to="/#aboutus" class=" rounded text-capitalize font-weight-bold" value="left">
                        About us
                        </v-btn>
    
-                       <v-btn to="/about" class="rounded text-capitalize font-weight-bold" value="center">
+                       <v-btn to="/#project" class="rounded text-capitalize font-weight-bold" value="center">
                        Project
                        </v-btn>
    
-                       <v-btn  to="/articles" class="rounded text-capitalize font-weight-bold" value="right">
+                       <v-btn  to="/#services" class="rounded text-capitalize font-weight-bold" value="right">
                        Services
                        </v-btn>
    
-                       <v-btn  href="#contact" class="rounded text-capitalize font-weight-bold" value="justify">
+                       <v-btn  href="#contactus" class="rounded text-capitalize font-weight-bold" value="justify">
                        Contact Us
                        </v-btn>
    
@@ -115,7 +115,7 @@ export default {
 .show{
     display:none !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
 
  .logoTexta {
    font-size: 23px !important;

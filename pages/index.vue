@@ -1,13 +1,13 @@
 <template>
      
-    <div class="main" style=" min-height: 100vh;">
+    <div id="home" class="main" style=" min-height: 100vh;">
 
         <div class="hero" style=" height: 98vh;">
 
             <Header />
              
             <!-- start of hero section -->
-            <v-container style="color: white; padding-top: 5.8rem;">
+            <v-container  style="color: white; padding-top: 5.8rem;">
              
                  
                      <div class="hero-content">
@@ -27,7 +27,7 @@
                         <div class="hero-img">
                             <v-img class="" src="/hero-images/img.png" />
                             <div class="inner-hero-img">
-                                <v-img src="/hero-images/arc-button.png"/>
+                                <v-img class="img" src="/hero-images/arc-button.png"/>
                             </div>
                         </div>
                      </div>
@@ -83,17 +83,18 @@
               <span class="span">UI DESIGN</span>
               <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
               <span class="span">DIGITAL MARKETING</span>
+              <!-- <div class="span" style="height: 5px; width: 10px; background: #025945;"></div> -->
           </div>
     </div>
 
         
         
         
-        <div>
+        <div id="aboutus" >
             <about-us/>
         </div>
 
-        <div>
+        <div id="services">
             <services />
         </div>
 
@@ -113,7 +114,20 @@
             <footerMenu />
         </div>
 
+       
+        <!-- back-to-the-top button -->
+        <div>
+            <button elevation="2" ref="backButton" class="back-to-top-button" @click="scrollToTop">
+            <!-- <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M19 12l-2-2v11H5v-11l2 2 7-7-7-7V11z" fill="white" />
+            </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                <path fill="white" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8s-8 3.58-8 8s3.58 8 8 8m1-8v4h-2v-4H8l4-4l4 4z"/></svg>
 
+            </button>
+        </div>
+
+        
         
     </template>
 
@@ -144,22 +158,106 @@ export default {
     },
 
     mounted(){
-        var tl = gsap.timeline();
-        tl.fromTo('.slides .span', 
-        { 
-            x:400,
-           
-        }, 
-
-        { 
-            duration: 10, 
-            x: -400,
-            ease: 'linear',
-            repeat: -1,
-            delay: (el, i) => i * 0.5,
+        gsap.utils.toArray('.slides').forEach((line, i) => {
+  
+            const speed = 50 // (in pixels per second)
+            
+            const links = line.querySelectorAll(".span"),
+                    tl = this.verticalLoop(links, i ? -speed : speed)
+                
+            links.forEach(link => {
+                link.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
+                link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: 1, overwrite: true}));
+            });
+            
         });
+
+        gsap.fromTo(".inner-hero-img .img", { 
+             rotation: '-100%' ,
+            }, 
+        { scrollTrigger: {trigger: ".inner-hero-img .img", scrub: 1, start: "20% bottom", end: "80% top"},
+          rotation: '100%' , perspective: 500, duration: 5,repeat:-1,yoyo:true,});
+
+
+    //   back-to-the-top button 
+            const { backButton } = this.$refs;
+            window.addEventListener('scroll', this.handleScroll);
+
+            gsap.to(backButton, {
+            opacity: 0,
+            y: 20,
+            display: 'none',
+            });
+           
+     
+    },
+
+
+    destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+     },
+
+    methods:{
+        verticalLoop(elements, speed) {
+            elements = gsap.utils.toArray(elements);
+            let firstBounds = elements[0].getBoundingClientRect(),
+                lastBounds = elements[elements.length - 1].getBoundingClientRect(),
+                left = firstBounds.left - firstBounds.right - Math.abs(elements[1].getBoundingClientRect().left - firstBounds.right),
+                right = lastBounds.right,
+                distance = right - left,
+                duration = Math.abs(distance / speed),
+                tl = gsap.timeline({repeat: -1}),
+                plus = speed < 0 ? "-=" : "+=",
+                minus = speed < 0 ? "+=" : "-=";
+            elements.forEach(el => {
+                let bounds = el.getBoundingClientRect(),
+                    ratio = Math.abs((right - bounds.left) / distance);
+                if (speed < 1) {
+                ratio = 1 - ratio;
+                }
+                tl.to(el, {
+                x: plus + distance * ratio,
+                duration: duration * ratio,
+                ease: "none"
+                }, 0);
+                tl.fromTo(el, {
+                x: minus + distance
+                }, {
+                x: plus + (1 - ratio) * distance,
+                ease: "none",
+                duration: (1 - ratio) * duration,
+                immediateRender: false
+                }, duration * ratio)
+            });
+            return tl;
+        },
+        
+        handleScroll() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop >= 2200) {
+                gsap.to(this.$refs.backButton, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                display: 'block',
+                ease: 'power2.out',
+                });
+            } else {
+                gsap.to(this.$refs.backButton, {
+                opacity: 0,
+                y: 20,
+                duration: 0.2,
+                display: 'none',
+                ease: 'power2.in',
+                });
+            }
+            },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
     }
 }
+
 </script>
 
 
@@ -221,7 +319,7 @@ export default {
     font-weight: 700;
 }
 
-@media (max-width: 768px) { /* xs breakpoint */
+@media (max-width: 960px) { /* xs breakpoint */
     .hero{
         height: 90vh !important;
    }
@@ -262,6 +360,9 @@ export default {
     font-size: larger;
     max-width: none;
     margin: 0;
+    padding: 0;
+    will-change: transform;
+
 
 
  }
@@ -285,6 +386,34 @@ export default {
     font-weight: 700;
     letter-spacing: 3px;
   }
+}
+
+
+
+.back-to-top-button {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: #025945;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  z-index: 99;
+
+}
+
+.back-to-top-button:hover {
+  background-color: #025945 hover shade;
+}
+
+.back-to-top-button svg {
+  width: 100%;
+  height: 100%;
 }
 
 </style>

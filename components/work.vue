@@ -7,9 +7,9 @@
            Ipsum dummy text of the printing.
         </p>
 
-        <div class="">
+        <div class="work-lists">
             <v-col v-for="item in work_lists">
-                <v-row class="border-b py-6 ">
+                <v-row class="border-b py-6  work">
 
                     <v-col cols="md-6" sm="12" lg="6" :class=" item.id === 2? 'order-md-2':''">
                         <v-img :src="item.img"/>
@@ -30,7 +30,7 @@
                         </div>
 
                         <h6 class="work-title " style="font-size: 60px;">Real Estate Web Site Design</h6>
-                        <p class="my-6 work-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing. 
+                        <p class="my-6 work-text" style="color: #666666; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing. 
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing.
                         </p>
                         <v-btn color="#025945" style="height:45px">Read More</v-btn>
@@ -45,6 +45,8 @@
 
 
 <script>
+import { gsap } from "gsap";
+
 export default{
     data(){
         return{
@@ -72,6 +74,20 @@ export default{
                 },
             ]
         }
+    },
+
+    mounted(){
+        const tl = gsap.timeline()
+
+        tl.from('.work-lists .work',{
+            scrollTrigger: {trigger: ".work-lists", scrub: 1, start: "20% bottom", end: "80% top"},
+            y: 100,
+            delay:0.5,
+            duration:10,
+            autoAlpha: 0,
+            stagger: 0.25,
+            ease:'back.out(1.7)'
+        })
     }
 }
 
@@ -88,12 +104,13 @@ export default{
     margin-left:6px;
     width:50%;
     font-size: 13px;
+    color: #666666;
 }
 
 .work-subtitle{
     display:flex;
     align-items: center;
-    color:gray;
+    color: #666666;
     font-style: italic;
 }
 .work-title{

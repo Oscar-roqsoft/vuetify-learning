@@ -6,12 +6,12 @@
              
             <v-col cols="md-6" sm="12" lg="6">
                 <h1  style="font-size:60px; line-height: 1.2;" class="text-capitalize">Service We provide</h1>
-                <v-expansion-panels  variant="accordion">
+                <v-expansion-panels    variant="accordion">
                     <v-expansion-panel
                         v-for="i in our_services"
-                        style="font-size:20px"
+                        style="font-size:16px;"
                         elevation="0"
-                        class=""
+                        class="py-3"
                         :key="i.id"
                         :title="i.title"
                         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

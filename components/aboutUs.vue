@@ -2,7 +2,7 @@
     <v-container class="my-md-14 my-6">
 
         <h1 class="about-heading">How our Design Process Works</h1>
-        <p  class="about-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy
+        <p  class="about-p my-4" Style="color: #666666;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy
             text of the printing.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
 
@@ -29,7 +29,7 @@
     
                         <div class="d-flex  align-center flex-wrap flex-md-nowrap  ga-6">
                        
-                                <div style="font-size:13px;">
+                                <div style="font-size:13px; color: #666666">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                                 </div>
     
@@ -77,6 +77,7 @@ export default{
 .about-p{
     max-width:50%;
     font-size:14px;
+    color:#666666 !important,
 }
 
 /* .btn{

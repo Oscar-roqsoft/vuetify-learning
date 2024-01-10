@@ -36,7 +36,7 @@
     color: white;
 }
 
-@media (max-width: 768px) { /* md breakpoint */
+@media (max-width: 960px) { /* md breakpoint */
     .contact{
         min-height: 200px !important;
         margin-top: 5rem;

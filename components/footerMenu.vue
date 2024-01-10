@@ -86,11 +86,11 @@
              <v-container>
                     <v-row  class="align-center" style="min-height: 80px;">
                         <v-col  cols="md-4" sm="12">
-                            <span style="color: rgb(93, 92, 92);"> © 2022 All rights reserved.  </span>
+                            <span style="color: #AAAAAA;"> © 2022 All rights reserved.  </span>
                         </v-col>
                         <v-col cols="md-3" sm="12" class="d-flex justify-md-space-between align-center">
-                            <span style="color: rgb(93, 92, 92);"> Terms Of use  </span>
-                            <span class="mx-4 mx-md-0" style="color: rgb(93, 92, 92);">  Privacy Policy  </span>
+                            <span style="color: #AAAAAA;"> Terms Of use  </span>
+                            <span class="mx-4 mx-md-0" style="color: #AAAAAA;">  Privacy Policy  </span>
                             
                         </v-col>
                         <v-col></v-col>
@@ -105,13 +105,19 @@
 
 <style scoped>
 
-@media (max-width: 768px) { /* md breakpoint */
+.footer-link span{
+        font-size: 14px;
+        color: #666666;
+
+    }
+
+@media (max-width: 960px) { /* md breakpoint */
     .footer-link h4{
        font-size: 16px !important;
     }
     .footer-link span{
         font-size: 12px;
-        color: rgb(97, 97, 97);
+        color: #666666;
 
     }
     .footer-title{
