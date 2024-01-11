@@ -80,10 +80,10 @@ export default{
         const tl = gsap.timeline()
 
         tl.from('.work-lists .work',{
-            scrollTrigger: {trigger: ".work-lists", scrub: 1, start: "20% bottom", end: "80% top"},
+            scrollTrigger: {trigger: ".work-lists .work", start: "20% bottom", end: "80% top"},
             y: 100,
             delay:0.5,
-            duration:10,
+            duration:3,
             autoAlpha: 0,
             stagger: 0.25,
             ease:'back.out(1.7)'
