@@ -4,7 +4,7 @@
 
         <div class="main-hero" >
             <v-container>
-                <div class="mt-14 hero" style="min-height: 80vh; color: white; 
+                <div class="mt-14 hero" style="min-height: 70vh; color: white; 
                 display: flex; justify-content: center; align-items: center; font-weight: 700;">
                     About Us
                 </div>

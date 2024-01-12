@@ -1,9 +1,12 @@
 <template>
     <div transition="slide-x-transition">
 
+        
         <div class="main-hero" >
+
             <v-container>
-                <div class="mt-14 hero" style="min-height: 600px; color: white; 
+
+                <div class="mt-14 hero" style="min-height: 70vh; color: white; 
                 display: flex; justify-content: center; align-items: center; font-weight: 700;">
                     Our Services
                 </div>
@@ -11,6 +14,10 @@
             </v-container>
             
         </div>
+
+
+        <div class="bg"></div>
+
         <div class="breadcrumb">
 
             <v-col class="d-flex align-items justify-center">
@@ -50,10 +57,16 @@
     background-repeat: no-repeat, no-repeat;
     /* background-color: #025945; */
 
+
 }
+
 
 .breadcrumb{
     position: relative;
     top: -2rem;
 }
+
+
+
+
 </style>
