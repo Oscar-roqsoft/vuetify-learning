@@ -42,7 +42,7 @@
                        Services
                        </v-btn>
    
-                       <v-btn  href="#contactus" class="rounded text-capitalize font-weight-bold" value="justify">
+                       <v-btn  href="/contact" class="rounded text-capitalize font-weight-bold" value="justify">
                        Contact Us
                        </v-btn>
    

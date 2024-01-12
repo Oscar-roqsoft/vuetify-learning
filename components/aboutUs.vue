@@ -33,7 +33,7 @@
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                                 </div>
     
-                                <v-btn height="45px" class="btn text-capitalize px-6" elevation="1" color="#025945">
+                                <v-btn :to="`about/${item.title}`" height="45px" class="btn text-capitalize px-6" elevation="1" color="#025945">
                                     See More
                                 </v-btn>
                         </div>
