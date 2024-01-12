@@ -42,7 +42,7 @@
                        Services
                        </v-btn>
    
-                       <v-btn  href="/contact" class="rounded text-capitalize font-weight-bold" value="justify">
+                       <v-btn  to="/contact" class="rounded text-capitalize font-weight-bold" value="justify">
                        Contact Us
                        </v-btn>
    
@@ -57,7 +57,8 @@
                    </v-btn-toggle>
                    </v-col>
    
-                   <div class="show">
+                   <div
+                   class="show">
    
                        <drawer >
                            <slot></slot>

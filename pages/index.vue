@@ -1,43 +1,42 @@
 <template>
-
-    <div transition="slide-x-transition">
         
         <div id="home" class="main" style=" min-height: 100vh;">
     
-            <div class="hero" style=" height: 98vh;">
+            <div class="hero" style=" height: 97vh;">
     
-                
-                 
-                <!-- start of hero section -->
-                <v-container  style="color: white; padding-top: 5.8rem;">
-                 
+                <div style="  max-width: 1170px; margin: 0 auto;">
+                    <!-- start of hero section -->
+                    <div  style="color: white; padding-top: 5.8rem;">
                      
-                         <div class="hero-content">
-                             <div class="hero-title mt-md-4">
-                                 <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
-                                  <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
-                                     typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
-                                 </p>
-     
-    
-                                <v-btn  class="text-capitalize stagger" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
-                                     let's Talk
-                                </v-btn>
-    
-                             </div>
-    
-                            <div class="hero-img">
-                                <v-img   class="img1" src="/hero-images/img.png" />
-                                <div class="inner-hero-img">
-                                    <v-img  class="img" src="/hero-images/arc-button.png"/>
+                            
+                             <div class="hero-content">
+                                 <div class="hero-title mt-md-4">
+                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
+                                      <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
+                                         typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
+                                     </p>
+         
+        
+                                    <v-btn  class="text-capitalize stagger" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
+                                         let's Talk
+                                    </v-btn>
+        
+                                 </div>
+        
+                                <div class="hero-img">
+                                    <v-img   class="img1" src="/hero-images/img.png" />
+                                    <div class="inner-hero-img">
+                                        <v-img  class="img" src="/hero-images/arc-button.png"/>
+                                    </div>
                                 </div>
-                            </div>
-                         </div>
-                         
+                             </div>
+                             
+                    
                 
-            
-                </v-container>
-                 <!-- end of hero section -->
+                            </div>
+                     <!-- end of hero section -->
+                </div>
+                 
      
             </div>
             
@@ -111,7 +110,6 @@
             <div>
                 <contact />
             </div>
-    </div>
      
 
         
@@ -168,14 +166,16 @@ export default {
         // hero section animations
         const textElements = document.querySelectorAll('.hero-title .stagger');
         gsap.fromTo(textElements, {
-            duration: 3,
+            duration: 10,
             opacity: 0,
             x: -200, // Adjust initial offset as needed
             // stagger: 0.1, // Stagger each animation by 0.2 seconds
+            blur:10,
             ease: 'linear', // Use a natural easing function
         }, {
             opacity: 1,
             x: 0,
+            blur:0,
         });
 
         const heroImage = document.querySelector('.img1');

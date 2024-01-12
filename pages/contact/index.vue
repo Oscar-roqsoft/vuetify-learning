@@ -14,7 +14,7 @@
                 </div>
                 <p style="font-size: 16px; color: #666666;">Any question or remarks? Just write us a message!</p>
             </div>
-            <v-card elevation="0" class="pa-md-4">
+            <v-card elevation="0" class="">
 
                 <v-row>
     
