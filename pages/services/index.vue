@@ -2,7 +2,8 @@
     <div transition="slide-x-transition">
 
         
-        <div class="main-hero" >
+        <div class="main-hero">
+
 
             <v-container>
 
@@ -12,6 +13,7 @@
                 </div>
                 
             </v-container>
+
             
         </div>
 
@@ -19,14 +21,14 @@
 
         <div class="bg"></div>
 
-        
+
 
         <div class="breadcrumb">
 
             <v-col class="d-flex align-items justify-center">
                 <v-card>
 
-                    <v-breadcrumbs color="#025945" :items="['Home','Our Services']">
+                    <v-breadcrumbs color="#025945" :items="items">
                         <template v-slot:divider>
                             <v-icon icon="mdi-chevron-right"></v-icon>
                         </template>
@@ -45,6 +47,29 @@
     </div>
 </template>
 
+
+<script>
+
+export default{
+    data(){
+        return{
+            items: [
+        {
+          title: 'Home',
+          disabled: false,
+          href: '/',
+        },
+       
+        {
+          title: 'Our Services',
+          disabled: true,
+          href: 'project',
+        },
+      ],
+        }
+    }
+}
+</script>
 
 <style scoped >
 

@@ -18,7 +18,7 @@
             <v-col class="d-flex align-items justify-center">
                 <v-card>
     
-                    <v-breadcrumbs color="#025945" :items="['Home','Our Project']">
+                    <v-breadcrumbs eager color="#025945" :items="['Home','Our Project']">
                         <template v-slot:divider>
                             <v-icon icon="mdi-chevron-right"></v-icon>
                         </template>
@@ -35,6 +35,30 @@
     </div>
 </template>
 
+
+
+<script>
+
+export default{
+    data(){
+        return{
+            items: [
+        {
+          title: 'Home',
+          disabled: false,
+          href: '/',
+        },
+       
+        {
+          title: 'Our Project',
+          disabled: true,
+          href: 'project',
+        },
+      ],
+        }
+    }
+}
+</script>
 
 <style scoped>
 

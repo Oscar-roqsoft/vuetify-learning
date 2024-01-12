@@ -75,18 +75,31 @@
         </div>
         
         
-        <div class="  mt-md-14 border py-4">
-              <div class="slides">
-                  <span class="span">SEO</span>
-                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-                  <span class="span">GRAPHIC DESIGN</span>
-                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-                  <span class="span">UI DESIGN</span>
-                  <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
-                  <span class="span">DIGITAL MARKETING</span>
-                  <!-- <div class="span" style="height: 5px; width: 10px; background: #025945;"></div> -->
-              </div>
+       
+
+
+        <div class="position-relative marquee-container  d-block border mt-sm-14">
+                <div class="marquee d-flex justify-space-around align-center ">
+                    <span class="span">SEO</span>
+                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <span class="span">GRAPHIC DESIGN</span>
+                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <span class="span">UI DESIGN</span>
+                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <span class="span">DIGITAL MARKETING</span>
+                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                </div>
+                <div class="marquee marquee2 d-flex justify-space-around align-center">
+                    <span class="span">SEO</span>
+                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <span class="span">GRAPHIC DESIGN</span>
+                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <span class="span">UI DESIGN</span>
+                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <span class="span">DIGITAL MARKETING</span>
+                </div>
         </div>
+        
     
             
             
@@ -191,21 +204,7 @@ export default {
         });
         // end of hero  animation section
 
-
-
-        gsap.utils.toArray('.slides').forEach((line, i) => {
-  
-            const speed = 50 // (in pixels per second)
-            
-            const links = line.querySelectorAll(".span"),
-                    tl = this.verticalLoop(links, i ? -speed : speed)
-                
-            links.forEach(link => {
-                link.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
-                link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: 1, overwrite: true}));
-            });
-            
-        });
+    
 
         gsap.fromTo(".inner-hero-img .img", { 
              rotation: '-100%' ,
@@ -233,39 +232,7 @@ export default {
      },
 
     methods:{
-        verticalLoop(elements, speed) {
-            elements = gsap.utils.toArray(elements);
-            let firstBounds = elements[0].getBoundingClientRect(),
-                lastBounds = elements[elements.length - 1].getBoundingClientRect(),
-                left = firstBounds.left - firstBounds.right - Math.abs(elements[1].getBoundingClientRect().left - firstBounds.right),
-                right = lastBounds.right,
-                distance = right - left,
-                duration = Math.abs(distance / speed),
-                tl = gsap.timeline({repeat: -1}),
-                plus = speed < 0 ? "-=" : "+=",
-                minus = speed < 0 ? "+=" : "-=";
-            elements.forEach(el => {
-                let bounds = el.getBoundingClientRect(),
-                    ratio = Math.abs((right - bounds.left) / distance);
-                if (speed < 1) {
-                ratio = 1 - ratio;
-                }
-                tl.to(el, {
-                x: plus + distance * ratio,
-                duration: duration * ratio,
-                ease: "none"
-                }, 0);
-                tl.fromTo(el, {
-                x: minus + distance
-                }, {
-                x: plus + (1 - ratio) * distance,
-                ease: "none",
-                duration: (1 - ratio) * duration,
-                immediateRender: false
-                }, duration * ratio)
-            });
-            return tl;
-        },
+      
         
         handleScroll() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -287,9 +254,11 @@ export default {
                 });
             }
             },
+
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       },
+      
     }
 }
 
@@ -322,7 +291,7 @@ export default {
 
 .hero-img{
     position: absolute;
-    min-width: 653px;
+    min-width: 640px;
     max-height: 853px;
     top: 3px;
     left: 33em;
@@ -342,17 +311,7 @@ export default {
     top:0;
 }
 
-.slides{
-    max-width: 1300px;
-    margin: 0px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 4px;
-    font-size: 40px;
-    color:#025945;
-    font-weight: 700;
-}
+
 
 @media (max-width: 960px) { /* xs breakpoint */
     .hero{
@@ -374,7 +333,7 @@ export default {
     position: relative;
     top: 20px;
     left: 0;
-    width: 100%;
+    max-width: 460px;
     min-height: 500px;
     min-width: 0;
 }
@@ -400,30 +359,39 @@ export default {
     margin: 14px 0px !important;
  }
 
- .slides{
-    overflow-x: hidden; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    font-size: larger;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    will-change: transform;
+ .marquee-container {
+  min-height: 20px;
 
-
-
- }
-
- .slides span {
-    white-space: nowrap; /* Keep elements on the same line */
-    padding: 0px 10px;
-    border-right: 1px solid #025945; /* Adjust color and width */
+  .marquee {
+    margin-top: 10px;
+    font-size: 18px !important;
   }
 
-
-.slides span:last-child {
-  border-right: none; /* Remove border from the last item */
+ 
+  .span {
+    padding-left: 10px;
+  }
 }
 
+}
+
+@media (max-width: 500px) {
+    .marquee-container {
+  min-height: 30px !important;
+
+  .marquee {
+    margin-top: 0px !important;
+    font-size: 13px !important;
+  }
+
+ 
+  .marquee div{
+    display: none;
+}
+ 
+}
+
+    
 }
 
 @media (min-width: 960px) { /* md breakpoint */
@@ -462,4 +430,41 @@ export default {
   height: 100%;
 }
 
+
+
+.marquee-container {
+  overflow: hidden;
+  line-height: 30px;
+  min-height: 100px;
+
+  .marquee {
+    margin-top: 30px;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    font-size: 40px;
+        color:#025945;
+        font-weight: 700;
+  }
+
+  .marquee2 {
+    animation-delay: 15s;
+  }
+  b {
+    padding-left: 10px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%
+  }
+}
 </style>
