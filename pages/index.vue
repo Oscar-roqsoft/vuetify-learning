@@ -4,7 +4,7 @@
     
             <div class="hero" style=" height: 97vh;">
     
-                <div style="  max-width: 1170px; margin: 0 auto;">
+                <v-container>
                     <!-- start of hero section -->
                     <div  style="color: white; padding-top: 5.8rem;">
                      
@@ -35,7 +35,7 @@
                 
                             </div>
                      <!-- end of hero section -->
-                </div>
+                </v-container>
                  
      
             </div>
