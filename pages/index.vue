@@ -87,7 +87,6 @@
                                 <span class="span">UI DESIGN</span>
                                 <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
                                 <span class="span">DIGITAL MARKETING</span>
-                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
                 </div>
                 <div class="marquee marquee2 d-flex justify-space-around align-center">
                     <span class="span">SEO</span>
@@ -97,6 +96,8 @@
                             <span class="span">UI DESIGN</span>
                             <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
                             <span class="span">DIGITAL MARKETING</span>
+                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+
                 </div>
         </div>
         
@@ -267,7 +268,9 @@ export default {
 
 
 <style scoped>
-
+.stagger{
+    opacity:0
+}
 .hero{
     background: #025945;
 }
@@ -461,10 +464,10 @@ export default {
 
 @keyframes marquee {
   0% {
-    left: 100%;
+    left: -100%;
   }
   100% {
-    left: -100%
+    left: 100%
   }
 }
 </style>

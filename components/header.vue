@@ -74,6 +74,8 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+
 export default {
 
 
@@ -84,6 +86,15 @@ export default {
      open: false,
    }
 
+ },
+ mounted(){
+    
+  gsap.fromTo('.logo', {
+            duration: 1.5,
+            opacity: 0,
+            }, {
+            opacity: 1,
+        });
  },
 
  methods:{
@@ -102,6 +113,8 @@ export default {
     font-size:40px;
     color:white;
     font-weight:700;
+  opacity:0;
+
 }
 
 .navbar{
@@ -112,6 +125,7 @@ export default {
     background: #025945;
     z-index: 99;
 }
+
 
 .show{
     display:none !important;
