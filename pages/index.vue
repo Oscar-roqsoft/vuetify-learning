@@ -2,7 +2,7 @@
         
         <div id="home" class="main" style=" min-height: 100vh;">
     
-            <div class="hero" style=" height: 97vh;">
+            <div class="hero" style=" min-height: 720px;">
     
                 <v-container>
                     <!-- start of hero section -->
@@ -12,12 +12,12 @@
                              <div class="hero-content">
                                  <div class="hero-title mt-md-4">
                                      <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
-                                      <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and 
-                                         typesetting industry. Lorem Ipsum issimply dummy text of the printing and typesetting.
+                                      <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">
+                                        We are a passionate team of designers and innovators, crafting unique digital experiences that inspire and engage. Our mission is to transform your ideas into visually stunning, user-friendly designs that elevate your brand.
                                      </p>
          
         
-                                    <v-btn  class="text-capitalize stagger" style="color: #025945; min-height: 50px; font-size: 15px; font-weight: 500;">
+                                    <v-btn  class="text-capitalize stagger" style="color: #3290f3; min-height: 50px; font-size: 15px; font-weight: 500;">
                                          let's Talk
                                     </v-btn>
         
@@ -80,23 +80,24 @@
 
         <div class="position-relative marquee-container  d-block border mt-sm-14">
                 <div class="marquee d-flex justify-space-around align-center ">
+                    <!-- <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div> -->
                     <span class="span">SEO</span>
-                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                                 <span class="span">GRAPHIC DESIGN</span>
-                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                                 <span class="span">UI DESIGN</span>
-                                <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                                <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                                 <span class="span">DIGITAL MARKETING</span>
                 </div>
                 <div class="marquee marquee2 d-flex justify-space-around align-center">
                     <span class="span">SEO</span>
-                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                             <span class="span">GRAPHIC DESIGN</span>
-                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                             <span class="span">UI DESIGN</span>
-                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                             <span class="span">DIGITAL MARKETING</span>
-                            <div class="span" style="height: 5px; width: 10px; background: #025945;"></div>
+                            <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
 
                 </div>
         </div>
@@ -272,7 +273,7 @@ export default {
     opacity:0
 }
 .hero{
-    background: #025945;
+    background:  #0275b2;
 }
 
 .hero-vector{
@@ -380,16 +381,20 @@ export default {
 
 @media (max-width: 500px) {
     .marquee-container {
-  min-height: 30px !important;
+  min-height: 50px !important;
+  display: flex;
+  margin-top: 20px;
 
   .marquee {
-    margin-top: 0px !important;
-    font-size: 13px !important;
+    margin-top: 10px !important;
+    font-size: 22px !important;
+   
   }
 
  
   .marquee div{
-    display: none;
+    /* display: none; */
+    margin-left: 10px !important;
 }
  
 }
@@ -411,7 +416,7 @@ export default {
   position: fixed;
   bottom: 40px;
   right: 20px;
-  background-color: #025945;
+  background-color:  #0275b2;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -425,7 +430,7 @@ export default {
 }
 
 .back-to-top-button:hover {
-  background-color: #025945 hover shade;
+  background-color:  #0275b2 hover shade;
 }
 
 .back-to-top-button svg {
@@ -450,7 +455,7 @@ export default {
     white-space: nowrap;
     animation: marquee 30s linear infinite;
     font-size: 40px;
-        color:#025945;
+        color: #0275b2;
         font-weight: 700;
   }
 

@@ -18,7 +18,7 @@
             <v-col class="d-flex align-items justify-center">
                 <v-card>
     
-                    <v-breadcrumbs eager color="#025945" :items="['Home','Our Project']">
+                    <v-breadcrumbs eager color=" #0275b2" :items="['Home','Our Project']">
                         <template v-slot:divider>
                             <v-icon icon="mdi-chevron-right"></v-icon>
                         </template>
@@ -71,7 +71,7 @@ export default{
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat, no-repeat;
-    /* background-color: #025945; */
+    /* background-color:  #0275b2; */
 
 }
 

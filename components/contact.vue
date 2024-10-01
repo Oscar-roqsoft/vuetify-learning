@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="contact" style="width: 100%;background: #025945;">
+    <div class="contact" style="width: 100%;background:  #0275b2;">
 
             <v-img class="contact-img"  src="/contact-img/contact1.png"/>
             <div class="img2-container">
@@ -9,7 +9,7 @@
                     <span class="svg" style="background: white;">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M24 1C24 0.447717 23.5523 2.00952e-06 23 4.07935e-07L14 1.20872e-06C13.4477 8.7155e-07 13 0.447716 13 1C13 1.55229 13.4477 2 14 2L22 2L22 10C22 10.5523 22.4477 11 23 11C23.5523 11 24 10.5523 24 10L24 1ZM1.70711 23.7071L23.7071 1.70711L22.2929 0.292894L0.292893 22.2929L1.70711 23.7071Z" fill="#025945"/>
+                        <path d="M24 1C24 0.447717 23.5523 2.00952e-06 23 4.07935e-07L14 1.20872e-06C13.4477 8.7155e-07 13 0.447716 13 1C13 1.55229 13.4477 2 14 2L22 2L22 10C22 10.5523 22.4477 11 23 11C23.5523 11 24 10.5523 24 10L24 1ZM1.70711 23.7071L23.7071 1.70711L22.2929 0.292894L0.292893 22.2929L1.70711 23.7071Z" fill=" #0275b2"/>
                         </svg>
 
                     </span>

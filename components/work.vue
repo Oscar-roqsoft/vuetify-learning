@@ -7,7 +7,7 @@
            Ipsum dummy text of the printing.
         </p>
 
-        <div class="work-lists">
+        <div class="work-lists mb-2">
             <v-col v-for="item in work_lists">
                 <v-row class="border-b py-6  work">
 
@@ -21,10 +21,10 @@
  
                                 <span>{{ i }}</span>
                                 <div class="mx-3"  :class="index === 2 ? 'd-none':'d-block'"
-                                style="height:2px; width:4px; background: #025945;"></div>
+                                style="height:2px; width:4px; background:  #0275b2;"></div>
                                 
                                 <!-- <span>Web Design</span>
-                                <div class="mx-3" style="height:2px; width:4px; background: #025945;"></div>
+                                <div class="mx-3" style="height:2px; width:4px; background:  #0275b2;"></div>
                                 <span>Web Development</span> -->
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                         <p class="my-6 work-text" style="color: #666666; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing. 
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing.
                         </p>
-                        <v-btn color="#025945" style="height:45px">Read More</v-btn>
+                        <v-btn color="#0275b2" style="height:45px">Read More</v-btn>
                     </v-col>
                 </v-row>
             </v-col>

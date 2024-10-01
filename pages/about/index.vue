@@ -18,7 +18,7 @@
             <v-col class="d-flex align-items justify-center">
                 <v-card>
     
-                    <v-breadcrumbs color="#025945" :items="items">
+                    <v-breadcrumbs color=" #0275b2" :items="items">
                         <template v-slot:divider>
                             <v-icon icon="mdi-chevron-right"></v-icon>
                         </template>
@@ -30,7 +30,7 @@
         <v-container>
                 <v-row> 
                     <v-col cols="md-6" sm="12" lg="6">
-                        <h3 style="color: #025945;"><span class="mr-4" >~</span>WHO WE ARE</h3>
+                        <h3 style="color:  #0275b2;"><span class="mr-4" >~</span>WHO WE ARE</h3>
                         <h2 class="about-heading">We Help To Get Solutions</h2>
                         <p class="my-4" style="color:#666666 ; font-size: 16px;">Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
@@ -119,7 +119,7 @@ export default{
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat, no-repeat;
-    /* background-color: #025945; */
+    /* background-color:  #0275b2; */
 
 }
 

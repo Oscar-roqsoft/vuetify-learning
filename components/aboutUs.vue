@@ -2,9 +2,8 @@
     <v-container class="my-md-14 my-6">
 
         <h1 class="about-heading">How our Design Process Works</h1>
-        <p  class="about-p my-4" Style="color: #666666;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy
-            text of the printing.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
+        <p  class="about-p my-4" Style="color: #666666;">
+            Our approach to design is simple yet thorough. We combine creativity with strategy to deliver impactful results. Explore our process below to see how we bring your ideas to life, step by step.        </p>
 
         <div class="d-flex flex-row flex-wrap ga-5">
 
@@ -30,10 +29,10 @@
                         <div class="d-flex  align-center flex-wrap flex-md-nowrap  ga-6">
                        
                                 <div style="font-size:13px; color: #666666">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                                    {{ item.text }}
                                 </div>
     
-                                <v-btn :to="`about/${item.title}`" height="45px" class="btn text-capitalize px-6" elevation="1" color="#025945">
+                                <v-btn :to="`about/${item.title}`" height="45px" class="btn text-capitalize px-6" elevation="1" color="#0275b2">
                                     See More
                                 </v-btn>
                         </div>
@@ -52,13 +51,13 @@ export default{
     data(){
         return{
             card_lists:[
-                {id:'01', img:'/about-img/Rectangle1.png', title:'Discovery', text:''},
+                {id:'01', img:'/about-img/Rectangle1.png', title:'Discovery', text:' We take the time to understand your business, audience, and goals. Through in-depth research and discussions, we gather the insights needed to create a design that truly reflects your brand’s vision.'},
 
-                {id:'02', img:'/about-img/Rectangle2.png', title:'Strategy', text:''},
+                {id:'02', img:'/about-img/Rectangle2.png', title:'Strategy', text:'In the Strategy phase, we turn insights into a clear plan of action. We define the design direction, setting goals and outlining how the visuals and functionality will align with your brand’s objectives to ensure impactful results.'},
 
-                {id:'03', img:'/about-img/Rectangle3.png', title:'Design', text:''},
+                {id:'03', img:'/about-img/Rectangle3.png', title:'Design', text:'The Design phase is where creativity takes center stage. We bring the vision to life with thoughtful layouts, striking visuals, and user-friendly interfaces that not only look great but also deliver a seamless experience.'},
 
-                {id:'04', img:'/about-img/Rectangle4.png', title:'Development',text:''},
+                {id:'04', img:'/about-img/Rectangle4.png', title:'Development',text:'In the Development phase, our ideas become reality. We translate the designs into fully functional, responsive, and optimized digital solutions, ensuring everything works smoothly across all devices and platforms.'},
             ],
         }
     }
