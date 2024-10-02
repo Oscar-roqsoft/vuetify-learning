@@ -80,8 +80,8 @@
 
         <div class="position-relative marquee-container  d-block border mt-sm-14">
                 <div class="marquee d-flex justify-space-around align-center ">
-                    <!-- <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div> -->
-                    <span class="span">SEO</span>
+                    <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
+                               <span class="span">SEO</span>
                                 <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                                 <span class="span">GRAPHIC DESIGN</span>
                                 <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>

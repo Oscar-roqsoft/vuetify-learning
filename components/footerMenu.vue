@@ -2,14 +2,15 @@
 
     <v-container class="mb-6">
         <v-row no-gutters>
-            <v-col cols="md-4" sm="12">
+            <v-col cols="md-5" sm="12">
                 <div  style="font-family: Permanent Marker !important; font-size:60px;" 
                     class="logo d-flex   font-weight-bold" >
-                    InHouse
+
+                     <v-img style="width: 100% !important;" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1727857282/inhouse_logo-03_gbelvf.png"/>
                 </div>
             </v-col>
 
-            <v-col >
+            <v-col>
                 <div class="d-flex" style="width:100%; justify-content: space-between;">
                     <div class="d-flex flex-column footer-link">
                          <h4 class="text-capitalize mb-2" style="font-size: 24px; font-weight: 500;">services</h4>
@@ -50,7 +51,7 @@
              <v-container>
                   <v-row class="align-center" style="min-height: 160px;">
                        <v-col cols="md-7" sm="12">
-                            <h4 class="footer-title" style="font-size: 64px; color: white;font-weight: 500;">Follow Us No Filter</h4>
+                            <h4 class="footer-title" style="font-size: 64px; color: white;font-weight: 500;">Follow Us</h4>
                        </v-col>
 
                        <v-col>
@@ -110,6 +111,10 @@
         color: #666666;
 
     }
+
+.logo{
+    width: 320px;
+}
 
 @media (max-width: 960px) { /* md breakpoint */
     .logo{

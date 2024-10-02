@@ -1,8 +1,12 @@
 <template>
-    <Header />
-    <slot/>
 
-    <div>
-        <footerMenu />
+    <div class="">
+        <Header />
+        <slot/>
+    
+        <div>
+            <footerMenu />
+        </div>
+
     </div>
 </template>
