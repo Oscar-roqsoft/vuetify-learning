@@ -4,9 +4,10 @@
           v-model="drawer"
           temporary
         >
-                <div style="font-family: Permanent Marker !important; font-size:30px; color: #0275b2;" 
-                class="logo ma-4 pa-2 d-flex justify-center  font-weight-bold" >
-                    InHouse
+                <div style="font-family: Permanent Marker !important; font-size:30px; color: #0275b2; width: 202px;" 
+                class="logo ma-2 pa-2 d-flex justify-center  font-weight-bold " >
+                   <img style="height: 100%;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1727857282/inhouse_logo-03_gbelvf.png" />
+
                 </div>
   
           <v-divider></v-divider>
