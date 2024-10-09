@@ -26,9 +26,9 @@
         </div>
 
 
-        <v-container >
+        <v-container class="">
 
-            <v-row class="mb-6 py-4">
+            <v-row class="mt-6 py-4 mb-16">
                 <v-col cols="md-6" sm="12" lg="6">
                     <v-img src="/about-img/Rectangle1.png"/>
                 </v-col>

@@ -5,6 +5,8 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  
+
   typescript:{shim:false},
 
   build: {
@@ -26,6 +28,10 @@ export default defineNuxtConfig({
         ));
       });
     },
+
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+
   ],
 
   vite: { ssr:{noExternal:['vuetify']}},

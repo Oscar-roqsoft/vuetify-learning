@@ -124,7 +124,21 @@
     
             <div>
                 <contact />
+
             </div>
+
+            <v-container>
+                <div class=" mb-14" >
+                    <div class="" style="height: 200px; 
+                        display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+                            <div style="font-size: 40px; font-weight: 700;color:  #0275b2; ">
+                                Contact Us
+                            </div>
+                            <p style="font-size: 16px; color: #666666;">Just write us a message!</p>
+                    </div>
+                    <contact-form/>
+                </div>
+            </v-container>
      
 
         
@@ -150,6 +164,8 @@
 <script>
 
 import { gsap } from "gsap";
+import { useStore } from '@/stores/index'; 
+
 export default {
 //     pageTransition: {
 //     name: 'fade', // Choose a transition name
@@ -158,6 +174,7 @@ export default {
    
     data(){
         return{
+            pinia:null,
 
         }
     },
@@ -177,7 +194,7 @@ export default {
       },
     },
 
-    mounted(){
+    async mounted(){
         // hero section animations
         const textElements = document.querySelectorAll('.hero-title .stagger');
         gsap.fromTo(textElements, {
@@ -224,8 +241,15 @@ export default {
             y: 20,
             display: 'none',
             });
+
+
+            await this.fetchProject()
            
      
+    },
+    
+    created() {
+            this.pinia = useStore();
     },
 
 
@@ -234,6 +258,28 @@ export default {
      },
 
     methods:{
+
+        async fetchProject(){
+
+            try{
+                const data = await fetch('https://pma.inhouse.codes/api/projects',{
+                    method:'GET',
+                    headers: { 'Content-Type': 'application/json' },
+
+                }).then(res => res.json());
+
+                if(data.data){
+                    this.pinia.setProjects(data.data)
+                    console.log('data',data.data)
+                }
+
+
+            }catch(e){
+                console.log('error:',e)
+
+            }
+
+        },
       
         
         handleScroll() {
@@ -255,7 +301,7 @@ export default {
                 ease: 'power2.in',
                 });
             }
-            },
+        },
 
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });

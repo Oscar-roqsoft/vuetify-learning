@@ -79,7 +79,7 @@ export default{
 }
 
 .main-hero{
-    background: linear-gradient(to top, rgba(2, 89, 69, .7), rgba(2, 89, 69, .6)),url('/services-img/services-2.jpeg');
+    background: linear-gradient(to top, rgba(2, 117, 178, 0.4), rgba(2, 117, 178, 0.5)),url('/services-img/services-2.jpeg');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat, no-repeat;
