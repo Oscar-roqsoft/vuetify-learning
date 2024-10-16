@@ -11,10 +11,10 @@
                             
                              <div class="hero-content">
                                  <div class="hero-title mt-md-4">
-                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">We Are <br> Creative <br> Design Agency</h3>
+                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">Let’s Build, <br> Launch, And Support Your Dreams For The Future</h3>
                                       <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">
-                                        We are a passionate team of designers and innovators, crafting unique digital experiences that inspire and engage. Our mission is to transform your ideas into visually stunning, user-friendly designs that elevate your brand.
-                                     </p>
+                                    At Inhouse.codes, we specialize in creating custom software solutions tailored to your business needs. We prioritize your goals, ensuring innovative, scalable, and user-friendly results. Let’s build your success together!                                 
+                                        </p>
          
         
                                     <v-btn  class="text-capitalize stagger" style="color: #3290f3; min-height: 50px; font-size: 15px; font-weight: 500;">
@@ -25,9 +25,9 @@
                                  </div>
         
                                 <div class="hero-img">
-                                    <v-img   class="img1" src="/hero-images/img.png" />
+                                    <v-img   class="img1" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729061890/heroImg_ly9oni.png" />
                                     <div class="inner-hero-img">
-                                        <v-img  class="img" src="/hero-images/arc-button.png"/>
+                                        <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729062488/arc_ka7w1g.png"/>
                                     </div>
                                 </div>
                              </div>
@@ -59,11 +59,6 @@
                         <div class="hero-vector mx-6">
                             <v-img src="/hero-images/Vector.png"/>
                         </div>
-                        <span class="text-decoration-underline">Dribble</span>
-        
-                        <div class="hero-vector mx-6">
-                            <v-img src="/hero-images/Vector.png"/>
-                        </div>
     
                         <span class="text-decoration-underline">twitter</span>
         
@@ -79,7 +74,7 @@
        
 
 
-        <div class="position-relative marquee-container  d-block border mt-sm-14">
+        <div class="position-relative marquee-container  d-block border">
                 <div class="marquee d-flex justify-space-around align-center ">
                     <div class="span" style="height: 5px; width: 10px; background:  #0275b2;"></div>
                                <span class="span">SEO</span>
@@ -107,7 +102,7 @@
             
             
             
-            <div id="aboutus" >
+            <div id="aboutus">
                 <about-us/>
             </div>
     
@@ -342,17 +337,17 @@ export default {
 
 .hero-img{
     position: absolute;
-    min-width: 640px;
-    max-height: 853px;
+    min-width: 590px;
+    max-height: auto;
     top: 3px;
-    left: 33em;
+    left: 38em;
 }
 .inner-hero-img{
     width: 100px;
     height: 100px;
     position: relative;
     top: -92px;
-    left: 115px;
+    left: -11px;
 
 }
 
@@ -364,9 +359,11 @@ export default {
 
 
 
+
+
 @media (max-width: 960px) { /* xs breakpoint */
     .hero{
-        height: 90vh !important;
+        height: 100vh !important;
    }
 
     .main{
@@ -380,10 +377,17 @@ export default {
     width: 100%;
 }
 
+  #aboutus{
+    margin-top: 80px !important;
+  }
+
+
+
+
   .hero-img{
     position: relative;
     top: 20px;
-    left: 0;
+    left: 36px;
     max-width: 460px;
     min-height: 500px;
     min-width: 0;
@@ -427,6 +431,11 @@ export default {
 }
 
 @media (max-width: 500px) {
+
+    .position-relative{
+    margin-top: 210px !important;
+    }
+
     .marquee-container {
   min-height: 50px !important;
   display: flex;
@@ -451,7 +460,7 @@ export default {
 
 @media (min-width: 960px) { /* md breakpoint */
   .my-text {
-    font-size: 120px;
+    font-size: 105px;
     font-weight: 700;
     letter-spacing: 3px;
   }

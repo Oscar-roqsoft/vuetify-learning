@@ -3,7 +3,7 @@
 
     <div class="contact" style="width: 100%;background:  #0275b2;">
 
-            <v-img class="contact-img"  src="/contact-img/contact1.png"/>
+            <v-img class="contact-img"  src="/contact-img/contact11.png"/>
             <div class="img2-container">
                 <v-img class="img" max-width="147px" src="/contact-img/text.png"/>
                     <span class="svg" style="background: white;">

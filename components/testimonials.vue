@@ -4,9 +4,9 @@
         <v-row>
             <v-col cols="md-6" sm="12" style="min-height: 600px;overflow: hidden;">
 
-                <h1 class="test-title">Don’t Believe Me Check Client Says</h1>
-                <p class="test-subtitle">Nulla facilisi. Sed aliquam massa dictum urna dictum, vitae varius quam egestas.
-                    Maecenas sollicitudin aliquam neque eu posuere. Nulla facilisi. Sed aliquam massa dictum urna dictum.
+                <h1 class="test-title"> Our Client Says</h1>
+                <p class="test-subtitle">What our clients have to say about working with us
+
                 </p>
                 
                 <div v-for="i in testimonial_images"   style="position: relative; "

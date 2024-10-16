@@ -1,14 +1,15 @@
 <template>
     <v-container class="my-md-14 my-6">
 
-        <h1 class="about-heading">How our Design Process Works</h1>
+        <h1 class="about-heading"> PROJECT ROADMAP</h1>
         <p  class="about-p my-4" Style="color: #666666;">
-            Our approach to design is simple yet thorough. We combine creativity with strategy to deliver impactful results. Explore our process below to see how we bring your ideas to life, step by step.        </p>
+            Discover our process below and see how we transform your ideas into reality, one step at a time.       
+         </p>
 
         <div class="d-flex flex-row flex-wrap ga-5">
 
             <div v-for="item in card_lists" >
-                <v-card elevation="2" class="mx-auto pt-4 pb-8 px-6 my-4 rounded-lg" max-width="570">
+                <v-card elevation="2" class="mx-auto pt-4 pb-8 px-6 my-4 rounded-lg" max-width="570" height="100%">
                         <div class="pb-2" style="font-size: 32px; font-weight:600; color:gray">
                            {{ item.id }}
                         </div>
@@ -22,13 +23,13 @@
                         >
                        </v-img>
     
-                       <div class="py-2" style="font-size: 40px; font-weight:600;">
+                       <div class="py-4" style="font-size: 40px; font-weight:600; line-height: 54px;">
                            {{ item.title }}
                         </div>
     
                         <div class="d-flex  align-center flex-wrap flex-md-nowrap  ga-6">
                        
-                                <div style="font-size:13px; color: #666666">
+                                <div style="font-size:13px; color: #666666; text-align: left;">
                                     {{ item.text }}
                                 </div>
     
@@ -51,13 +52,13 @@ export default{
     data(){
         return{
             card_lists:[
-                {id:'01', img:'/about-img/Rectangle1.png', title:'Discovery', text:' We take the time to understand your business, audience, and goals. Through in-depth research and discussions, we gather the insights needed to create a design that truly reflects your brand’s vision.'},
+                {id:'01', img:'/about-img/frame10.png', title:'Product Demo', text:' At Inhouse.codes, we create a functional, small-scale version of the software to give you a clear idea of what the final product will look like. This demo includes basic features and user interfaces, allowing you to test it, provide feedback, and ensure it aligns with your vision. This process helps minimize risks, improves collaboration, and ensures smooth development moving forward'},
 
-                {id:'02', img:'/about-img/Rectangle2.png', title:'Strategy', text:'In the Strategy phase, we turn insights into a clear plan of action. We define the design direction, setting goals and outlining how the visuals and functionality will align with your brand’s objectives to ensure impactful results.'},
+                {id:'02', img:'/about-img/frame20.png', title:' Product Design & Development', text:'We bring your product vision to life with our end-to-end product development capabilities, including front-end and back-end development, database design, API integration, and infrastructure setup. We work with a wide range of programming languages and technologies, depending on the nature of the projects we undertake.'},
 
-                {id:'03', img:'/about-img/Rectangle3.png', title:'Design', text:'The Design phase is where creativity takes center stage. We bring the vision to life with thoughtful layouts, striking visuals, and user-friendly interfaces that not only look great but also deliver a seamless experience.'},
+                {id:'03', img:'/about-img/frame30.png', title:'Quality Assurance & Software Testing', text:'We also ensure the software is functional, bug-free, and optimized for performance through rigorous testing. '},
 
-                {id:'04', img:'/about-img/Rectangle4.png', title:'Development',text:'In the Development phase, our ideas become reality. We translate the designs into fully functional, responsive, and optimized digital solutions, ensuring everything works smoothly across all devices and platforms.'},
+                {id:'04', img:'/about-img/frame40.png', title:' Maintenance and Support',text:'At Inhouse.codes, we offer ongoing support, updates, and maintenance to ensure your software runs smoothly over time. We also provide comprehensive maintenance, bug fixing, performance optimization, feature enhancements, and technical support. '},
             ],
         }
     }

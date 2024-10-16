@@ -2,9 +2,8 @@
 <template>
 
    <v-container class="my-6">
-        <h1 class="work-heading">Our Recent Work</h1>
-        <p class="work-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem 
-           Ipsum dummy text of the printing.
+        <h1 class="work-heading">Our Work</h1>
+        <p class="work-p">We create world-class software solutions to your needs and offer long-term support.
         </p>
 
         <div class="work-lists mb-2">
