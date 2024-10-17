@@ -27,16 +27,16 @@
                            {{ item.title }}
                         </div>
     
-                        <div class="d-flex  align-center flex-wrap flex-md-nowrap  ga-6">
+                        <!-- <div class="d-block  align-center flex-wrap flex-md-nowrap  gap-4">
                        
-                                <div style="font-size:13px; color: #666666; text-align: left;">
-                                    {{ item.text }}
-                                </div>
-    
-                                <v-btn :to="`about/${item.title}`" height="45px" class="btn text-capitalize px-6" elevation="1" color="#0275b2">
-                                    See More
-                                </v-btn>
+                        </div> -->
+                        <div style="font-size:13px; color: #666666; text-align: left;">
+                            {{ item.text }}
                         </div>
+
+                        <v-btn :to="`about/${item.title}`" height="45px" class="btn text-capitalize mt-6 px-6" elevation="1" color="#0275b2">
+                            See More
+                        </v-btn>
     
     
                 </v-card>

@@ -40,9 +40,9 @@
              <v-divider></v-divider>
 
              <div >
-                 <v-btn class=" rounded d-flex justify-center align-items-center pa-7  ma-4" style="background:  #0275b2; color:white"   href="#contact" 
+                 <v-btn to="/contact" class=" rounded d-flex justify-center align-items-center pa-7  ma-4" style="background:  #0275b2; color:white"   href="#contact" 
                   >
-                         Get Started
+                  Contact Us
                  </v-btn>
              </div>
 
@@ -98,7 +98,7 @@
         { title: 'About Us', link: '/about', icon: 'mdi-information' },
         { title: 'Projects', link: '/project', icon: 'mdi-briefcase' },
         { title: 'Services', link: '/services', icon: 'mdi-cogs' },
-        { title: 'Contact Us', link: '/contact', icon: 'mdi-phone' },
+        // { title: 'Contact Us', link: '/contact', icon: 'mdi-phone' },
       ],
 
       }

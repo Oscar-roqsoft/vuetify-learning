@@ -35,11 +35,11 @@
             <v-btn to="/services" class="rounded text-capitalize font-weight-bold" value="right">
               Services
             </v-btn>
-            <v-btn to="/contact" class="rounded text-capitalize font-weight-bold" value="justify">
+            <!-- <v-btn to="/contact" class="rounded text-capitalize font-weight-bold" value="justify">
               Contact Us
-            </v-btn>
-            <v-btn style="background: white; color: black" href="#contact" class="rounded ml-3 text-capitalize font-weight-bold" value="justify">
-              Get Started
+            </v-btn> -->
+            <v-btn to="/contact" style="background: white; color: black" href="#contact" class="rounded ml-3 text-capitalize font-weight-bold" value="justify">
+              Contact Us
             </v-btn>
           </v-btn-toggle>
         </v-col>
