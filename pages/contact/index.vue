@@ -109,16 +109,16 @@ export default{
                     icon:'phone'
 
                 },
-                
+
                 {
                     id:2, 
-                    value:'demo@gmail.com',
+                    value:'inhouse2023.codes@gmail.com',
                      icon: 'email',
 
                 },
                 {
                     id:3, 
-                    value:`132 Dartmouth Street Boston, Massachusetts 02156 United States`,
+                    value:`Holyghost junction,Okpuno Awka,Anambra State`,
                     icon: 'map-marker',
                 },
             ]
