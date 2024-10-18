@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+// import type { NotivueConfig, NotivueItem /*, ... */ } from 'notivue'
+
 import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
@@ -13,26 +15,48 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
- modules: [
-      async (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', config => {
-        if (!config.plugins) {
-          config.plugins = [];
-        }
-        config.plugins.push(vuetify(
-          {
-            styles: {
-              configFile: 'assets/settings.scss',
-            },
-          }
-        ));
-      });
-    },
+//  modules: [
+//       async (options, nuxt) => {
+//       nuxt.hooks.hook('vite:extendConfig', config => {
+//         if (!config.plugins) {
+//           config.plugins = [];
+//         }
+//         config.plugins.push(vuetify(
+//           {
+//             styles: {
+//               configFile: 'assets/settings.scss',
+//             },
+//           }
+//         ));
+//       });
+//     },
+modules: [
+  (_options, nuxt) => {
+    nuxt.hooks.hook('vite:extendConfig', (config) => {
+      // @ts-expect-error
+      config.plugins.push(vuetify({ autoImport: true }))
+    })
+  },
+  //...
+  '@pinia/nuxt',
+  '@pinia-plugin-persistedstate/nuxt',
+  'notivue/nuxt'
+],
 
-    '@pinia/nuxt',
-    'pinia-plugin-persistedstate/nuxt',
+css: [
+  'notivue/notification.css', // Only needed if using built-in <Notification />
+  'notivue/animations.css' // Only needed if using default animations
+],
 
-  ],
+
+
+
+  //   '@pinia/nuxt',
+  //   'pinia-plugin-persistedstate/nuxt',
+
+
+
+  // ],
 
   vite: { ssr:{noExternal:['vuetify']}},
 })

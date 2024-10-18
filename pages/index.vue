@@ -11,7 +11,8 @@
                             
                              <div class="hero-content">
                                  <div class="hero-title mt-md-4">
-                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">Let’s Build, <br> Launch, And Support Your Dreams For The Future</h3>
+                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">Let’s Build,  Launch, And Support Your Dreams
+                                         For The Future</h3>
                                       <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">
                                         At Inhouse.codes, we specialize in creating custom software solutions tailored to your business needs. We prioritize your goals, ensuring innovative, scalable, and user-friendly results. Let’s build your success together!                                 
                                       </p>
@@ -27,9 +28,9 @@
                                 <div class="hero-img">
                                     <v-img   class="img1" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729061890/heroImg_ly9oni.png" />
                                     <div class="inner-hero-img">
-                                        <!-- <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729062488/arc_ka7w1g.png"/> -->
                                     </div>
                                 </div>
+                                <!-- <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729062488/arc_ka7w1g.png"/> -->
                              </div>
                              
                     
@@ -47,17 +48,17 @@
                         <a style="color: #3290f3;" href="https://www.linkedin.com/company/inhouse-codes-llc/" target="_blank" class="text-decoration-underline">LinkedIn</a>
         
                         <div class="hero-vector mx-6">
-                            <v-img src="/hero-images/Vector.png"/>
+                            <v-img src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729287618/star_vinuxf.png"/>
                         </div>
                         <a style="color: #3290f3;" href="https://www.facebook.com/profile.php?id=61566931382177&mibextid=ZbWKwL" target="_blank" class="text-decoration-underline">Facebook</a>
         
                         <div class="hero-vector mx-6">
-                            <v-img src="/hero-images/Vector.png"/>
+                            <v-img src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729287618/star_vinuxf.png"/>
                         </div>
                         <a style="color: #3290f3;" href="https://www.instagram.com/inhouse.codes/" target="_blank" class="text-decoration-underline">Instagram</a>
         
                         <div class="hero-vector mx-6">
-                            <v-img src="/hero-images/Vector.png"/>
+                            <v-img src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729287618/star_vinuxf.png"/>
                         </div>
     
                         <a style="color: #3290f3;" href="https://x.com/inhouse_codesHQ" target="_blank" class="text-decoration-underline">twitter</a>
@@ -187,6 +188,8 @@ export default {
       },
     },
 
+    
+
     async mounted(){
         // hero section animations
         const textElements = document.querySelectorAll('.hero-title .stagger');
@@ -236,8 +239,11 @@ export default {
             });
 
 
-            await this.fetchProject()
-           
+            if(this.pinia.state.projects.length){
+                this.pinia.state.projects
+            }else{
+                await this.fetchProject()
+            }
      
     },
     
@@ -245,10 +251,9 @@ export default {
             this.pinia = useStore();
     },
 
-
     destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
-     },
+    },
 
     methods:{
 
@@ -273,7 +278,6 @@ export default {
             }
 
         },
-      
         
         handleScroll() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -336,7 +340,7 @@ export default {
     position: absolute;
     max-height: auto;
     top: 3px;
-    left: 38em;
+    left: 37.4em;
 }
 
 .inner-hero-img{
@@ -386,7 +390,7 @@ export default {
     position: relative;
     top: 20px;
     left: 36px;
-    max-width: 360px !important;
+    max-width: 320px !important;
     min-height: 500px;
     /* min-width: 320px; */
     width: 100%;
@@ -460,10 +464,12 @@ export default {
 
 @media (min-width: 960px) { /* md breakpoint */
   .my-text {
-    font-size: 85px;
+    font-size: 70px;
     font-weight: 700;
     letter-spacing: 3px;
+     width: 60%;
   }
+
   .hero-img{
     min-width: 590px;
   }

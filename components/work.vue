@@ -7,11 +7,11 @@
         </p>
 
         <div class="work-lists mb-2">
-            <v-col v-for="item in work_lists">
+            <v-col v-for="item in filteredProjects.slice(0,2)">
                 <v-row class="border-b py-6  work">
 
-                    <v-col cols="md-6" sm="12" lg="6" :class=" item.id === 2? 'order-md-2':''">
-                        <v-img eager :src="item.img"/>
+                    <v-col cols="md-6" sm="12" lg="6" :class=" item.id === 2? 'order-md-2':''" >
+                        <v-img class="w-100 h-100" eager :src="item.featured_img" style="min-height: 250px;"/>
                     </v-col>
 
                     <v-col class="mt-4" cols="md-6" sm="12" lg="6">
@@ -28,9 +28,9 @@
                             </div>
                         </div>
 
-                        <h6 class="work-title " style="font-size: 60px;">Real Estate Web Site Design</h6>
-                        <p class="my-6 work-text" style="color: #666666; font-size: 14px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing. 
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has. Lorem Ipsum dummy text of the printing.
+                        <h6 class="work-title " style="font-size: 60px;">{{item.title}}</h6>
+                        <p class="my-6 work-text" style="color: #666666; font-size: 14px;">
+                            {{ item.description }}
                         </p>
                         <v-btn color="#0275b2" style="height:45px">Read More</v-btn>
                     </v-col>
@@ -45,10 +45,16 @@
 
 <script>
 import { gsap } from "gsap";
+import {
+  Notivue,
+  Notification
+} from 'notivue'
+
 
 export default{
     data(){
         return{
+            pinia:null,
             work_lists:[
                 {
                     id:1, 
@@ -75,7 +81,21 @@ export default{
         }
     },
 
+    created() {
+            // Access the pin value from the Pinia store and assign it to the local data property
+            this.pinia = useStore();
+    },
+
+    computed: {
+        filteredProjects() {
+        return this.pinia.state.projects.filter((project) => project.featured_img !== null);
+        },
+    },
+
     mounted(){
+
+        console.log(this.filteredProjects)
+
         const tl = gsap.timeline()
 
         tl.from('.work-lists .work',{
