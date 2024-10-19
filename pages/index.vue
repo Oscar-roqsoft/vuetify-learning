@@ -11,8 +11,9 @@
                             
                              <div class="hero-content">
                                  <div class="hero-title mt-md-4">
-                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">Let’s Build,  Launch, And Support Your Dreams
-                                         For The Future</h3>
+                                     <h3 class="my-text stagger" style=" z-index: 10; line-height: 1.0;">
+                                        Ready To <br> Bring Your <br> Software Ideas To Life?
+                                    </h3>
                                       <p  class="my-10 hero-p stagger" style="color: #fffff; font-size: 14px;">
                                         At Inhouse.codes, we specialize in creating custom software solutions tailored to your business needs. We prioritize your goals, ensuring innovative, scalable, and user-friendly results. Let’s build your success together!                                 
                                       </p>
@@ -340,7 +341,7 @@ export default {
     position: absolute;
     max-height: auto;
     top: 3px;
-    left: 37.4em;
+    left: 40.4em;
 }
 
 .inner-hero-img{
@@ -355,9 +356,12 @@ export default {
 .position-relative{
     position: absolute;
     right:0;
-    top:0;
+    top:30px;
 }
 
+#aboutus{
+    margin-top: 110px !important;
+  }
 
 
 
@@ -391,7 +395,7 @@ export default {
     top: 20px;
     left: 36px;
     max-width: 320px !important;
-    min-height: 500px;
+    min-height: 400px;
     /* min-width: 320px; */
     width: 100%;
 }
@@ -464,14 +468,14 @@ export default {
 
 @media (min-width: 960px) { /* md breakpoint */
   .my-text {
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 700;
     letter-spacing: 3px;
-     width: 60%;
+     width: 80%;
   }
 
   .hero-img{
-    min-width: 590px;
+    min-width: 530px;
   }
 }
 

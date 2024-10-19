@@ -31,6 +31,7 @@ export const useStore = defineStore('inhouse', () => {
 
   const state = reactive({
     projects:[],
+    testimonial:[],
     current_page:'home',
     user: null,
     isAuthenticated: false,
@@ -41,6 +42,9 @@ export const useStore = defineStore('inhouse', () => {
 
     const setProjects = (payload)=>{
         state.projects = payload
+    }
+    const setTestimonial = (payload)=>{
+        state.testimonial = payload
     }
 
   const setUser = (payload) => {
@@ -71,6 +75,7 @@ export const useStore = defineStore('inhouse', () => {
 
   return {
     setProjects,
+    setTestimonial,
     state,
     
   }
