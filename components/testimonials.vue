@@ -122,8 +122,8 @@ export default{
         if(this.pinia.state.testimonial.length){
                 this.pinia.state.testimonial
             }else{
-                await this.fetchtestimonial()
             }
+            await this.fetchtestimonial()
     },
 
 

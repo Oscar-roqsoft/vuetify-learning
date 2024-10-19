@@ -240,11 +240,11 @@ export default {
             });
 
 
-            if(this.pinia.state.projects.length){
-                this.pinia.state.projects
-            }else{
-                await this.fetchProject()
-            }
+            // if(this.pinia.state.projects.length){
+            //     // this.pinia.state.projects
+            // }else{
+            // }
+            await this.fetchProject()
      
     },
     
