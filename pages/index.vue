@@ -29,9 +29,9 @@
                                 <div class="hero-img">
                                     <v-img   class="img1" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729061890/heroImg_ly9oni.png" />
                                     <div class="inner-hero-img">
+                                        <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729321957/arc1_i6hl86.png"/>
                                     </div>
                                 </div>
-                                <!-- <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729062488/arc_ka7w1g.png"/> -->
                              </div>
                              
                     
