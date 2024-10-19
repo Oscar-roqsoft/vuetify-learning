@@ -27,7 +27,7 @@
                                  </div>
         
                                 <div class="hero-img">
-                                    <v-img   class="img1" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729061890/heroImg_ly9oni.png" />
+                                    <v-img   class="img1" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729374275/hero_section_fn290d.png" />
                                     <div class="inner-hero-img">
                                         <v-img  class="img" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729321957/arc1_i6hl86.png"/>
                                     </div>
@@ -341,7 +341,7 @@ export default {
     position: absolute;
     max-height: auto;
     top: 3px;
-    left: 40.4em;
+    left: 33.4em;
 }
 
 .inner-hero-img{
@@ -349,7 +349,7 @@ export default {
     height: 100px;
     position: relative;
     top: -92px;
-    left: -11px;
+    left: 77px;
 
 }
 
@@ -475,7 +475,7 @@ export default {
   }
 
   .hero-img{
-    min-width: 530px;
+    min-width: 650px;
   }
 }
 
