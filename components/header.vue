@@ -5,8 +5,8 @@
         no-gutters
         class="d-flex py-0 justify-space-between align-center"
       >
-        <div @click="navigateTo('/')" style="font-family: Permanent Marker !important; font-size: 30px; z-index: 20;" class="logo pa-2 d-flex justify-center font-weight-bold">
-          <img style="height: 50px;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1728373796/inhouselogo-white_qqqnwr.png" />
+        <div @click="navigateTo('/')" style="font-family: Permanent Marker !important; font-size: 30px; z-index: 20; max-width: 150px; " class="logo pa-2 d-flex justify-center font-weight-bold">
+          <img style="height: 50px;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729374552/inhouse_logo-11_ol4jws.png" />
           <!-- <img style="height: 50px;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1727854037/inhouse_logo-05_myp2w6.png" /> -->
         </div>
 

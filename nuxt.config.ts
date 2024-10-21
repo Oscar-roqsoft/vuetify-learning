@@ -58,5 +58,13 @@ css: [
 
   // ],
 
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/inhousefavicon.png' }
+      ]
+    },
+  },
+
   vite: { ssr:{noExternal:['vuetify']}},
 })

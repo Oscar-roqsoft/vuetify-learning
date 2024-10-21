@@ -4,9 +4,10 @@
           v-model="drawer"
           temporary
         >
-                <div style="font-family: Permanent Marker !important; font-size:30px; color: #0275b2; width: 202px;" 
+                <div style="font-family: Permanent Marker !important; font-size:30px; color: #0275b2; width: 140px;" 
                 class="logo ma-2 pa-2 d-flex justify-center  font-weight-bold " >
-                   <img style="height: 100%;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1727857282/inhouse_logo-03_gbelvf.png" />
+                   <img style="height: 100%;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729528784/inhouse_logo_full-11_e8bkl2.png" />
+                   <!-- <img style="height: 100%;" class="w-100" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1727857282/inhouse_logo-03_gbelvf.png" /> -->
 
                 </div>
   
