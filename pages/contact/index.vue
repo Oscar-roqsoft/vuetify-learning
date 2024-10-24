@@ -1,10 +1,6 @@
 <template>
 
     <div transition="slide-x-transition">
-
-       
-
-        
         
         <v-container>
             <div class="mt-14" style="height: 200px; 

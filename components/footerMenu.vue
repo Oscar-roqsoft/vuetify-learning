@@ -6,7 +6,7 @@
                 <div  style="font-family: Permanent Marker !important; font-size:60px;" 
                     class="logo d-flex   font-weight-bold" >
 
-                     <v-img style="width: 100% !important;" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729374552/inhouse_logo-11_ol4jws.png"/>
+                     <v-img style="width: 100% !important;" src="https://res.cloudinary.com/dpehz96bs/image/upload/v1729528784/inhouse_logo_full-11_e8bkl2.png"/>
                 </div>
             </v-col>
 
